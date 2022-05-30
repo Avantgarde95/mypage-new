@@ -1,0 +1,13 @@
+# IDE files.
+.vscode
+.idea
+!.vscode/settings.json
+
+# Apple files.
+.DS_Store
+
+# NPM files.
+node_modules
+
+# Next.js files.
+.next
