@@ -21,7 +21,7 @@ Install the dependencies
 Run in the development mode
 
 - Run `yarn dev`
-- Open <http://localhost:3000> on the browser
+- Open <http://localhost:3000/mypage-new> on the browser
 
 Generate the static website
 
