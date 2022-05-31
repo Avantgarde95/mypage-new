@@ -1,5 +1,8 @@
 import React from "react";
 
-const HomePage = () => <div>Hello!</div>;
+import Page from "containers/Page";
+import Sky from "containers/home/Stars";
+
+const HomePage = () => <Page background={<Sky />}>Hello</Page>;
 
 export default HomePage;

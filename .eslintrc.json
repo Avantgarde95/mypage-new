@@ -1,6 +1,10 @@
 {
-  "extends": ["next/core-web-vitals", "prettier"],
-  "plugins": ["prettier"],
+  "extends": [
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:styled-components-a11y/recommended"
+  ],
+  "plugins": ["prettier", "styled-components-a11y"],
   "rules": {
     "@next/next/no-img-element": "off",
     "prettier/prettier": "error",

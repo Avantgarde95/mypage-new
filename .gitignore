@@ -11,3 +11,4 @@ node_modules
 
 # Next.js files.
 .next
+.env

@@ -1,21 +1,17 @@
 import React from "react";
 import { RecoilRoot } from "recoil";
 import type { AppProps } from "next/app";
-import Head from "next/head";
-import { Global } from "@emotion/react";
+import { Global, ThemeProvider } from "@emotion/react";
 
-import Layout from "containers/Layout";
 import { globalStyle } from "styles/Global";
+import { theme } from "styles/Theme";
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <RecoilRoot>
-    <Global styles={globalStyle} />
-    <Head>
-      <title>Home</title>
-    </Head>
-    <Layout>
+    <ThemeProvider theme={theme}>
+      <Global styles={globalStyle} />
       <Component {...pageProps} />
-    </Layout>
+    </ThemeProvider>
   </RecoilRoot>
 );
 
