@@ -5,21 +5,25 @@ import { darken, lighten } from "polished";
 import { FaRegStar } from "react-icons/fa";
 
 import { getRandomFloat, range } from "utils/MathUtils";
+import Client from "components/Client";
 import { createNeonSVGStyle } from "styles/Effects";
 
 const Sky = () => (
   <Container>
-    {range(0, 8).map((index) => (
-      <Star
-        key={index}
-        style={{
-          top: `${getRandomFloat(10, 90)}%`,
-          left: `${getRandomFloat(10, 90)}%`,
-          fontSize: `${getRandomFloat(0.5, 1)}rem`,
-          animationDelay: `${getRandomFloat(0, 3)}s`,
-        }}
-      />
-    ))}
+    {/* Re-create the stars when we reload the website. */}
+    <Client>
+      {range(0, 8).map((index) => (
+        <Star
+          key={index}
+          style={{
+            top: `${getRandomFloat(10, 90)}%`,
+            left: `${getRandomFloat(10, 90)}%`,
+            fontSize: `${getRandomFloat(0.5, 1)}rem`,
+            animationDelay: `${getRandomFloat(0, 3)}s`,
+          }}
+        />
+      ))}
+    </Client>
   </Container>
 );
 
