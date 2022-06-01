@@ -1,9 +1,9 @@
 import React, { ReactNode } from "react";
-import Head from "next/head";
 import styled from "@emotion/styled";
 
 import Header from "containers/Header";
 import Footer from "containers/Footer";
+import { parentOfFlexChildStyle } from "styles/Fixes";
 
 interface PageProps {
   background?: ReactNode;
@@ -54,6 +54,8 @@ const Content = styled.div`
   width: 100%;
   height: 100%;
   flex: 1;
+
+  ${parentOfFlexChildStyle}
 `;
 
 export default Page;

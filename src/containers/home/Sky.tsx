@@ -5,7 +5,7 @@ import { darken, lighten } from "polished";
 import { FaRegStar } from "react-icons/fa";
 
 import { getRandomFloat, range } from "utils/MathUtils";
-import { neonSVGStyle } from "styles/Effects";
+import { createNeonSVGStyle } from "styles/Effects";
 
 const Sky = () => (
   <Container>
@@ -57,7 +57,7 @@ const Star = styled(FaRegStar)`
   animation: ${starAnimation} 5s infinite;
 
   ${({ theme }) =>
-    neonSVGStyle(
+    createNeonSVGStyle(
       darken(0.1, theme.color.yellow),
       lighten(0.1, theme.color.yellow)
     )}

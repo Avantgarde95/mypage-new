@@ -6,7 +6,6 @@ import { css } from "@emotion/react";
 import { FaChevronLeft, FaHome } from "react-icons/fa";
 
 import { Language } from "types/Language";
-import { ROUTES } from "constants/Routes";
 import { languageState } from "states/Language";
 
 const languageSymbols: Array<[Language, string]> = [
@@ -23,7 +22,7 @@ const Footer = () => {
   };
 
   const handleClickHome = () => {
-    router.push(ROUTES.home);
+    router.push("/");
   };
 
   const handleClickBack = () => {
